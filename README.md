@@ -22,7 +22,7 @@ The following software must be installed/present on your local machine before yo
 You will also need some Ansible roles installed so they can be used in the building of the VM. To install the roles:
 
   1. Run `$ ansible-galaxy install -r requirements.txt` in this directory.
-  2. If your local Ansible roles path is not the default (`/etc/ansible/roles`), update the `role_paths` inside `ubuntu1404.json` to match your custom location.
+  2. If your local Ansible roles path is not the default (`/etc/ansible/roles`), update the `role_paths` inside `ubuntu1604.json` to match your custom location.
 
 If you don't have Ansible installed (perhaps you're using a Windows PC?), you can simply clone the required Ansible roles from GitHub directly (use [Ansible Galaxy](https://galaxy.ansible.com/) to get the GitHub repository URLs for each role listed in `requirements.txt`), and update the `role_paths` variable to match the location of the cloned role.
 
