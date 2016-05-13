@@ -1,7 +1,7 @@
 #!/bin/bash -eux
 
 # Install pip.
-apt -y install python-setuptools python-dev
+apt -y install python-setuptools python-dev libffi-dev
 easy_install pip
 
 # Install Ansible.
