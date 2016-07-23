@@ -1,6 +1,6 @@
 # Packer Example - Ubuntu 16.04 minimal Vagrant Box
 
-**Current Ubuntu Version Used**: 16.04
+**Current Ubuntu Version Used**: 16.04.1
 
 This example build configuration installs and configures Ubuntu 16.04 x86_64 minimal using Ansible, and then generates two Vagrant box files, for:
 
