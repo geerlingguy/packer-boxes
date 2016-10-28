@@ -38,6 +38,16 @@ If you want to only build a box for one of the supported virtualization platform
 
     $ packer build --only=vmware-iso ubuntu1604.json
 
+## Testing built boxes
+
+There's an included Vagrantfile that allows quick testing of the built Vagrant boxes. From this same directory, run one of the following commands after building the boxes:
+
+    # For VMware Fusion:
+    $ vagrant up vmware --provider=vmware_fusion
+    
+    # For VirtualBox:
+    $ vagrant up virtualbox --provider=virtualbox
+
 ## License
 
 MIT license.
