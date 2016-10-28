@@ -3,12 +3,12 @@
     {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/setup.sh"
+      "script": "scripts/ansible.sh"
     },
     {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/ansible.sh"
+      "script": "scripts/setup.sh"
     },
     {
       "type": "ansible-local",
@@ -83,7 +83,7 @@
           "modifyvm",
           "{{.Name}}",
           "--cpus",
-          "2"
+          "1"
         ]
       ]
     },
@@ -137,7 +137,7 @@
       "vmx_data": {
         "cpuid.coresPerSocket": "1",
         "memsize": "1024",
-        "numvcpus": "2"
+        "numvcpus": "1"
       }
     }
   ],
