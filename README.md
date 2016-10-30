@@ -2,6 +2,11 @@
 
 **Current Ubuntu Version Used**: 16.04.1
 
+**Pre-built Vagrant Box**:
+
+  - [`vagrant init geerlingguy/ubuntu1604`](https://vagrantcloud.com/geerlingguy/boxes/ubuntu1604)
+  - See older versions: http://files.midwesternmac.com/
+
 This example build configuration installs and configures Ubuntu 16.04 x86_64 minimal using Ansible, and then generates two Vagrant box files, for:
 
   - VirtualBox
