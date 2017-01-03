@@ -13,10 +13,7 @@
     {
       "type": "ansible-local",
       "playbook_file": "ansible/main.yml",
-      "role_paths": [
-        "/etc/ansible/roles/geerlingguy.packer-debian",
-        "/etc/ansible/roles/geerlingguy.nfs"
-      ]
+      "galaxy_file": "requirements.yml"
     },
     {
       "type": "shell",
