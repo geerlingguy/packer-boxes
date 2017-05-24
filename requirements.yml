@@ -1,3 +1,5 @@
 ---
-- src: geerlingguy.packer-debian
+
 - src: geerlingguy.nfs
+- src: geerlingguy.packer-debian
+

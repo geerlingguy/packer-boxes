@@ -5,12 +5,15 @@
 
   roles:
     - geerlingguy.nfs
-    - geerlingguy.packer-debian
+    - { role: geerlingguy.packer-debian, vmware_install_open_vm_tools: '{{vmware_install_open_vm_tools}}' }
 
   tasks:
-    - apt: "name={{ item }} state=installed"
+
+    - name: Install 
+      apt: "name={{ item }} state=installed"
       with_items:
         - git
         - wget
         - curl
         - vim
+
