@@ -1,0 +1,1 @@
+I can read file from the folder shared with host.

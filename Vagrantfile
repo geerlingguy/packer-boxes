@@ -3,7 +3,6 @@
 
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
-  config.vm.synced_folder '.', '/vagrant', type: 'nfs'
 
   # VMware Fusion.
   # `vagrant up vmware --provider=vmware_fusion`
@@ -19,6 +18,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision "shell", inline: "echo Hello, World"
+    config.vm.provision "shell", inline: "echo $(cat /vagrant/test/test.txt)"
   end
 
   # VirtualBox.
@@ -37,6 +37,7 @@ Vagrant.configure("2") do |config|
     end
 
     config.vm.provision "shell", inline: "echo Hello, World"
+    config.vm.provision "shell", inline: "echo $(cat /vagrant/test/test.txt)"
   end
 
 end
