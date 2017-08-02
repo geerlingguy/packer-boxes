@@ -1,4 +1,8 @@
 {
+
+  "variables": {
+    "perform_dist_upgrade": "true"
+  },
   "provisioners": [
     {
       "type": "shell",
@@ -8,7 +12,24 @@
     {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/setup.sh"
+      "script": "scripts/reboot.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}' '{{user `perform_dist_upgrade`}}' ",
+      "script": "scripts/dist-upgrade.sh",
+      "pause_before": "20s"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/reboot.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/setup.sh",
+      "pause_before": "20s"
     },
     {
       "type": "ansible-local",
