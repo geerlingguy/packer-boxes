@@ -53,7 +53,7 @@
       "boot_wait": "10s",
       "disk_size": 81920,
       "guest_os_type": "Ubuntu_64",
-      "headless": true,
+      "headless": false,
       "http_directory": "http",
       "iso_urls": [
         "iso/ubuntu-16.04.3-server-amd64.iso",
@@ -115,7 +115,7 @@
       "boot_wait": "10s",
       "disk_size": 81920,
       "guest_os_type": "ubuntu-64",
-      "headless": true,
+      "headless": false,
       "http_directory": "http",
       "iso_urls": [
         "iso/ubuntu-16.04.3-server-amd64.iso",
