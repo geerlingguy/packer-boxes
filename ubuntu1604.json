@@ -56,8 +56,8 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-16.04.2-server-amd64.iso",
-        "http://releases.ubuntu.com/16.04/ubuntu-16.04.2-server-amd64.iso"
+        "iso/ubuntu-16.04.3-server-amd64.iso",
+        "http://releases.ubuntu.com/16.04/ubuntu-16.04.3-server-amd64.iso"
       ],
       "iso_checksum_type": "sha256",
       "iso_checksum": "737ae7041212c628de5751d15c3016058b0e833fdc32e7420209b76ca3d0a535",
@@ -118,8 +118,8 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-16.04.2-server-amd64.iso",
-        "http://releases.ubuntu.com/16.04/ubuntu-16.04.2-server-amd64.iso"
+        "iso/ubuntu-16.04.3-server-amd64.iso",
+        "http://releases.ubuntu.com/16.04/ubuntu-16.04.3-server-amd64.iso"
       ],
       "iso_checksum_type": "sha256",
       "iso_checksum": "737ae7041212c628de5751d15c3016058b0e833fdc32e7420209b76ca3d0a535",
