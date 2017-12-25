@@ -34,7 +34,11 @@ After a few minutes, Packer should tell you the box was generated successfully.
 
 If you want to only build a box for one of the supported virtualization platforms (e.g. only build the VMware box), add `--only=vmware-iso` to the `packer build` command:
 
-    $ packer build --only=vmware-iso ubuntu1604.json
+    # For VMware Fusion:
+    $ vagrant up vmware --provider=vmware_fusion
+    
+    # For VirtualBox:
+    $ vagrant up virtualbox --provider=virtualbox
 
 ## Testing built boxes
 
