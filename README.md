@@ -1,6 +1,6 @@
 # Packer Example - Ubuntu 16.04 minimal Vagrant Box
 
-**Current Ubuntu Version Used**: 16.04.4
+**Current Ubuntu Version Used**: 16.04.5
 
 **Pre-built Vagrant Box**:
 
