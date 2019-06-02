@@ -8,9 +8,11 @@
     - geerlingguy.packer-debian
 
   tasks:
-    - apt: "name={{ item }} state=installed"
-      with_items:
-        - git
-        - wget
-        - curl
-        - vim
+    - name: Install some helpful utilities.
+      apt:
+        name:
+          - git
+          - wget
+          - curl
+          - vim
+        state: installed
