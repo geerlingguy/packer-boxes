@@ -15,4 +15,4 @@
           - wget
           - curl
           - vim
-        state: installed
+        state: present
