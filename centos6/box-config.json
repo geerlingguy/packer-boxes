@@ -10,7 +10,7 @@
     },
     {
       "type": "ansible-local",
-      "playbook_file": "../shared/playbooks/redhat-centos-main.yml",
+      "playbook_file": "../shared/main.yml",
       "galaxy_file": "../shared/requirements.yml",
       "galaxycommand": "ansible-galaxy -c"
     },

@@ -15,7 +15,7 @@
     },
     {
       "type": "ansible-local",
-      "playbook_file": "../shared/playbooks/debian-ubuntu-main.yml",
+      "playbook_file": "../shared/main.yml",
       "galaxy_file": "../shared/requirements.yml"
     },
     {
