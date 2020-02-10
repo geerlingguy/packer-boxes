@@ -4,15 +4,10 @@
   },
   "provisioners": [
     {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/ansible.sh"
-    },
-    {
-      "type": "ansible-local",
+      "type": "ansible",
       "playbook_file": "../shared/main.yml",
       "galaxy_file": "../shared/requirements.yml",
-      "galaxycommand": "ansible-galaxy -c"
+      "galaxy_force_install": false
     },
     {
       "type": "shell",
