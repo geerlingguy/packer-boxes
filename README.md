@@ -36,6 +36,18 @@ After a few minutes, Packer should tell you the box was generated successfully, 
 
 > **Note**: This configuration includes a post-processor that pushes the built box to Vagrant Cloud (which requires a `VAGRANT_CLOUD_TOKEN` environment variable to be set); remove the `vagrant-cloud` post-processor from the Packer template to build the box locally and not push it to Vagrant Cloud. You don't need to specify a `version` variable either, if not using the `vagrant-cloud` post-processor.
 
+### Building _all_ the boxes
+
+Whenever VirtualBox is updated, it's best to re-build _all_ the base boxes so they have the latest guest additions.
+
+Assuming you have Ansible and Packer installed already, and you have a `VAGRANT_CLOUD_TOKEN` available in your environment, you can run the playbook to build and push updated versions for all the boxes:
+
+    ansible-playbook build-boxes.yml
+
+You can also build and push just one box:
+
+    ansible-playbook build-boxes.yml -e "{'boxes':['debian10']}"
+
 ## Testing built boxes
 
 There's an included Vagrantfile that allows quick testing of the built Vagrant boxes. From the same box directory, run the following command after building the box:

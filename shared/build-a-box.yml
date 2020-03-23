@@ -1,0 +1,26 @@
+---
+# Set a version for this new box.
+- name: Get current box version from Vagrant.
+  uri:
+    url: https://app.vagrantup.com/api/v1/box/geerlingguy/{{ item }}
+    return_content: true
+  register: box_info
+
+- name: Set the current version of the base box.
+  set_fact:
+    current_box_version: "{{ (box_info.content | from_json).current_version.version }}"
+
+- name: Set the next minor version of the base box.
+  set_fact:
+    new_box_version: >-
+      {{ current_box_version.split('.')[0] }}.{{ current_box_version.split('.')[1] }}.{{ current_box_version.split('.')[2] | int + 1 }}
+
+- name: Print info about current box.
+  debug:
+    msg: "Building new geerlingguy/{{ item }} box version {{ new_box_version }}"
+
+# Build and push the new box.
+- name: Build and push the box using Packer.
+  command: >
+    packer build -var 'version={{ new_box_version }}' box-config.json
+    chdir={{ item }}
