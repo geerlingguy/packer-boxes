@@ -5,9 +5,9 @@
 
   vars:
     boxes:
-      # - centos8
-      # - centos7
-      # - centos6
+      - centos8
+      - centos7
+      - centos6
       - debian10
       - debian9
       - debian8
