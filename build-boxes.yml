@@ -13,6 +13,7 @@
       - debian8
       - ubuntu1804
       - ubuntu1604
+      - ubuntu2004
     versions: {}
 
   tasks:
