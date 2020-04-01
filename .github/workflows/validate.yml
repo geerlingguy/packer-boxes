@@ -1,0 +1,30 @@
+name: Validate Packer JSON files
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Install Packer
+        run: |
+          # Download and install Packer.
+          export VER="1.5.1"
+          wget https://releases.hashicorp.com/packer/${VER}/packer_${VER}_linux_amd64.zip
+          unzip packer_${VER}_linux_amd64.zip
+          sudo mv packer /usr/local/bin
+
+          # Ensure Packer is installed correctly.
+          packer --version
+
+      - name: Validate json
+        run: |
+          find . -name "*.json" | while read filename
+          do
+            echo "$filename"; packer validate -syntax-only "$filename"
+          done
