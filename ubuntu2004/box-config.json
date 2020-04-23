@@ -58,11 +58,11 @@
       "headless": false,
       "http_directory": "http",
       "iso_urls": [
-        "iso/focal-server-amd64.iso",
-        "http://cdimage.ubuntu.com/ubuntu-server/daily/current/focal-server-amd64.iso"
+        "iso/focal-legacy-server-amd64.iso",
+        "http://cdimage.ubuntu.com/ubuntu-server/daily/20200423/focal-legacy-server-amd64.iso"
       ],
       "iso_checksum_type": "sha256",
-      "iso_checksum": "8cde09c4333a9b81e9f2654a341c7cd57cf2213175794ee862433d356e4d82ef",
+      "iso_checksum": "36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
