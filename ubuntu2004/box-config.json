@@ -22,6 +22,15 @@
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "script": "scripts/cleanup.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "inline_shebang": "#!/bin/bash -e",
+      "inline": [
+        "echo 'Resetting SSH port to default!'",
+        "rm /etc/ssh/sshd_config.d/packer-init.conf"
+      ]
     }
   ],
   "builders": [
@@ -45,7 +54,7 @@
       "iso_checksum": "caf3fd69c77c439f162e2ba6040e9c320c4ff0d69aad1340a514319a9264df9f",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_port": 22,
+      "ssh_port": 2222,
       "ssh_wait_timeout": "1800s",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
