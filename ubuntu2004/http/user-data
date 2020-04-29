@@ -1,0 +1,43 @@
+#cloud-config
+autoinstall:
+  version: 1
+  apt:
+    geoip: true
+    preserve_sources_list: true
+#    primary:
+#    - arches: [amd64, i386]
+#      uri: http://de.archive.ubuntu.com/ubuntu
+#    - arches: [default]
+#      uri: http://ports.ubuntu.com/ubuntu-ports
+  packages:
+    - ubuntu-standard
+    - ubuntu-server
+    - openssh-server
+    - cryptsetup
+    - build-essential
+    - libssl-dev
+    - libreadline-dev
+    - zlib1g-dev
+    - linux-source
+    - dkms
+    - nfs-common
+    - software-properties-common
+  identity: {hostname: vagrant, password: $6$H6dENrige2G2YwQQ$ip2nRmBQDm5OXtQ.xpxOoq.f32XOuNkHm6KgMiPH7LFcYhbWnEiVS8bGD3UGRDRstnL4nn/0Av8rtaXfPjGMz1,
+    realname: vagrant, username: vagrant}
+  keyboard: {layout: us, variant: ''}
+  locale: en_US
+  network:
+    network:
+      ethernets:
+        enp0s3: {dhcp4: true, dhcp-identifier: mac}
+      version: 2
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: false
+  storage:
+    layout:
+        name: lvm
+  late-commands:
+    - sed -i 's/^#*\(send dhcp-client-identifier\).*$/\1 = hardware;/' /target/etc/dhcp/dhclient.conf
+    - 'sed -i "s/dhcp4: true/&\n      dhcp-identifier: mac/" /target/etc/netplan/00-installer-config.yaml'
