@@ -31,11 +31,11 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "CentOS-7-x86_64-Minimal-1908.iso",
-        "http://mirrors.mit.edu/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1908.iso"
+        "CentOS-7-x86_64-Minimal-2003.iso",
+        "http://mirrors.mit.edu/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-2003.iso"
       ],
       "iso_checksum_type": "sha256",
-      "iso_checksum": "9a2c47d97b9975452f7d582264e9fc16d108ed8252ac6816239a3b58cef5c53d",
+      "iso_checksum": "659691c28a0e672558b003d223f83938f254b39875ee7559d1a4a14c79173193",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
