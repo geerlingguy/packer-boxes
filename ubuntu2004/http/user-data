@@ -47,4 +47,3 @@ autoinstall:
   late-commands:
     - 'sed -i "s/^#*\(send dhcp-client-identifier\).*$/\1 = hardware;/" /target/etc/dhcp/dhclient.conf'
     - 'sed -i "s/dhcp4: true/&\n      dhcp-identifier: mac/" /target/etc/netplan/00-installer-config.yaml'
-    - 'echo "Port 2222" > /target/etc/ssh/sshd_config.d/packer-init.conf'
