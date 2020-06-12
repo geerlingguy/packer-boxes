@@ -34,8 +34,7 @@
         "CentOS-8.1.1911-x86_64-dvd1.iso",
         "http://mirror.mobap.edu/centos/8.1.1911/isos/x86_64/CentOS-8.1.1911-x86_64-dvd1.iso"
       ],
-      "iso_checksum_type": "sha256",
-      "iso_checksum": "3ee3f4ea1538e026fff763e2b284a6f20b259d91d1ad5688f5783a67d279423b",
+      "iso_checksum": "sha256:3ee3f4ea1538e026fff763e2b284a6f20b259d91d1ad5688f5783a67d279423b",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,

@@ -54,8 +54,7 @@
         "iso-cd/debian-8.11.1-amd64-CD-1.iso",
         "https://cdimage.debian.org/cdimage/archive/8.11.1/amd64/iso-cd/debian-8.11.1-amd64-CD-1.iso"
       ],
-      "iso_checksum_type": "sha256",
-      "iso_checksum": "8bfd6b0c1ee0eaa0639bae5b07656fb70bf46a07fb9d14b9d06641a8119b2877",
+      "iso_checksum": "sha256:8bfd6b0c1ee0eaa0639bae5b07656fb70bf46a07fb9d14b9d06641a8119b2877",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,

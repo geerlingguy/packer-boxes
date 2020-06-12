@@ -61,8 +61,7 @@
         "iso/ubuntu-18.04.4-server-amd64.iso",
         "http://cdimage.ubuntu.com/ubuntu/releases/bionic/release/ubuntu-18.04.4-server-amd64.iso"
       ],
-      "iso_checksum_type": "sha256",
-      "iso_checksum": "e2ecdace33c939527cbc9e8d23576381c493b071107207d2040af72595f8990b",
+      "iso_checksum": "sha256:e2ecdace33c939527cbc9e8d23576381c493b071107207d2040af72595f8990b",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
