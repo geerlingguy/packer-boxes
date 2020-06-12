@@ -61,8 +61,7 @@
         "iso/focal-legacy-server-amd64.iso",
         "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso"
       ],
-      "iso_checksum_type": "sha256",
-      "iso_checksum": "36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
+      "iso_checksum": "sha256:36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
@@ -101,3 +100,4 @@
     ]
   ]
 }
+
