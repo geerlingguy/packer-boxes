@@ -1,56 +1,4 @@
 {
-  "variables": {
-    "cpus": "1",
-    "vagrant_cloud_token": "{{env `VAGRANT_CLOUD_TOKEN`}}",
-    "desktop": "false",
-    "disk_size": "130048",
-    "ftp_proxy": "{{ env `ftp_proxy` }}",
-    "headless": "true",
-    "hostname": "vagrant",
-    "http_proxy": "{{ env `http_proxy` }}",
-    "https_proxy": "{{ env `https_proxy` }}",
-    "install_vagrant_key": "true",
-    "vbox_guest_additions_local_path": "/home/nrichards/virtualbox/",
-    "vbox_guest_additions_path": "http://download.virtualbox.org/virtualbox/6.1.10/",
-    "vbox_guest_additions_iso": "VBoxGuestAdditions_6.1.10.iso",
-    "iso_checksum": "caf3fd69c77c439f162e2ba6040e9c320c4ff0d69aad1340a514319a9264df9f",
-    "iso_checksum_type": "sha256",
-    "iso_name": "ubuntu-20.04-legacy-server-amd64.iso",
-    "iso_path1": "C:/Users/neil.richards/Documents/OS-Images/Ubuntu/",
-    "iso_path2": "/home/nrichards/iso/",
-    "iso_url": "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso",
-    "memory": "1024",
-    "no_proxy": "{{ env `no_proxy` }}",
-    "rsync_proxy": "{{ env `rsync_proxy` }}",
-    "ssh_fullname": "Neil Richards",
-    "ssh_password": "ubuntu",
-    "ssh_username": "ubuntu",
-    "update": "false",
-    "version": "0.1.0",
-    "vm_name": "ubuntu2004-server"
-  },
-  "provisioners": [
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/ansible.sh"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/setup.sh"
-    },
-    {
-      "type": "ansible-local",
-      "playbook_file": "../shared/main.yml",
-      "galaxy_file": "../shared/requirements.yml"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-      "script": "scripts/cleanup.sh"
-    }
-  ],
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -69,7 +17,7 @@
         " debian-installer=en_GB<wait>",
         " fb=false<wait>",
         " initrd=/install/initrd.gz<wait>",
-        " kbd-chooser/method=us<wait>",
+        " kbd-chooser/method=uk<wait>",
         " keyboard-configuration/layout=UK<wait>",
         " keyboard-configuration/variant=UK<wait>",
         " netcfg/get_domain=vm<wait>",
@@ -94,9 +42,7 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "1800s",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
-      "guest_additions_path": "{{user `vbox_guest_additions_local_path`}}VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",
-      "vm_name": "packer-ubuntu-20.04-amd64",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "vboxmanage": [
         [
           "modifyvm",
@@ -110,7 +56,9 @@
           "--cpus",
           "1"
         ]
-      ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "packer-ubuntu-20.04-amd64"
     }
   ],
   "post-processors": [
@@ -125,6 +73,53 @@
         "version": "{{user `version`}}"
       }
     ]
-  ]
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/software.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/setup.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/cleanup.sh"
+    }
+  ],
+  "variables": {
+    "cpus": "1",
+    "desktop": "false",
+    "disk_size": "130048",
+    "ftp_proxy": "{{ env `ftp_proxy` }}",
+    "headless": "true",
+    "hostname": "vagrant",
+    "http_proxy": "{{ env `http_proxy` }}",
+    "https_proxy": "{{ env `https_proxy` }}",
+    "install_vagrant_key": "true",
+    "iso_checksum": "caf3fd69c77c439f162e2ba6040e9c320c4ff0d69aad1340a514319a9264df9f",
+    "iso_checksum_type": "sha256",
+    "iso_name": "ubuntu-20.04-legacy-server-amd64.iso",
+    "iso_path1": "C:/Users/neil.richards/Documents/OS-Images/Ubuntu/",
+    "iso_path2": "/home/nrichards/iso/",
+    "iso_url": "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso",
+    "memory": "1024",
+    "no_proxy": "{{ env `no_proxy` }}",
+    "rsync_proxy": "{{ env `rsync_proxy` }}",
+    "ssh_fullname": "Neil Richards",
+    "ssh_password": "ubuntu",
+    "ssh_username": "ubuntu",
+    "update": "false",
+    "vagrant_cloud_token": "{{env `VAGRANT_CLOUD_TOKEN`}}",
+    "vbox_guest_additions_iso": "VBoxGuestAdditions_6.1.10.iso",
+    "vbox_guest_additions_local_path": "/home/nrichards/virtualbox/",
+    "vbox_guest_additions_path": "http://download.virtualbox.org/virtualbox/6.1.10/",
+    "version": "0.1.0",
+    "vm_name": "ubuntu2004-server"
+  }
 }
 
