@@ -33,6 +33,7 @@
       "headless": false,
       "http_directory": "http",
       "iso_urls": [
+        "{{user `iso_path1`}}/{{user `iso_name`}}",
         "iso/focal-legacy-server-amd64.iso",
         "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso"
       ],
@@ -104,7 +105,7 @@
     "iso_checksum": "caf3fd69c77c439f162e2ba6040e9c320c4ff0d69aad1340a514319a9264df9f",
     "iso_checksum_type": "sha256",
     "iso_name": "ubuntu-20.04-legacy-server-amd64.iso",
-    "iso_path1": "C:/Users/neil.richards/Documents/OS-Images/Ubuntu/",
+    "iso_path1": "C:/Users/titch/OS-Images/Ubuntu/",
     "iso_path2": "/home/nrichards/iso/",
     "iso_url": "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso",
     "memory": "1024",
