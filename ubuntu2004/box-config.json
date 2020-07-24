@@ -40,6 +40,7 @@
       "iso_checksum": "sha256:36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
+      "ssh_private_key_file": "{{user `ssh_private_key`}}",
       "ssh_port": 22,
       "ssh_wait_timeout": "1800s",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
@@ -87,6 +88,10 @@
       "script": "scripts/setup.sh"
     },
     {
+      "type": "ansible-local",
+      "playbook_file": "ansible/main.yml"
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "script": "scripts/cleanup.sh"
@@ -114,6 +119,7 @@
     "ssh_fullname": "Neil Richards",
     "ssh_password": "ubuntu",
     "ssh_username": "ubuntu",
+    "ssh_private_key": "C:/Users/neil.richards/.vagrant.d/insecure_private_key",
     "update": "false",
     "vagrant_cloud_token": "{{env `VAGRANT_CLOUD_TOKEN`}}",
     "vbox_guest_additions_iso": "VBoxGuestAdditions_6.1.10.iso",

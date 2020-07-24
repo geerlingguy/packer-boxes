@@ -17,11 +17,6 @@ curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 #Add GPG Key for Ansible
 curl -fsSL http://ppa.launchpad.net/ansible/ansible/ubuntu/dists/bionic/Release.gpg | apt-key add -
 
-#Add nodejs
-curl -fsSL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
-nodesource_setup.sh
-
-
 #Add Docker repo to apt sources
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 
@@ -40,4 +35,3 @@ apt-get -y install docker-ce
 apt-get -y install kubelet kubeadm kubectl kubernetes-cni
 apt-get -y install dotnet-sdk-3.1
 apt-get -y install openjdk-11-jre-headless
-apt-get -y install nodejs

@@ -1,0 +1,17 @@
+---
+    - hosts: localhost
+      become: yes
+      gather_facts: yes
+
+      tasks:
+        - name: "Install some helpful utilities."
+          apt:
+            name:
+              - git
+              - wget
+              - curl
+              - vim
+            state: present
+          when: ansible_os_family == 'Debian'
+
+        - import_tasks: package_node_12.yml
