@@ -119,7 +119,7 @@
     "vbox_guest_additions_iso": "VBoxGuestAdditions_6.1.10.iso",
     "vbox_guest_additions_local_path": "/home/nrichards/virtualbox/",
     "vbox_guest_additions_path": "http://download.virtualbox.org/virtualbox/6.1.10/",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "vm_name": "ubuntu2004-server"
   }
 }
