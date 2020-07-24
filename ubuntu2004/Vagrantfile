@@ -1,14 +1,18 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+DIR_HOME = "C:/Users/neil.richards"
+
 Vagrant.configure("2") do |config|
-  config.ssh.insert_key = false
-  config.vm.synced_folder '.', '/vagrant', type: 'nfs'
+  config.ssh.insert_key = true
+  config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.ssh.password = "vagrant"
+
 
   # VirtualBox.
   config.vm.define "virtualbox" do |virtualbox|
     virtualbox.vm.hostname = "virtualbox-ubuntu2004"
-    virtualbox.vm.box = "file://builds/virtualbox-ubuntu2004.box"
+    virtualbox.vm.box = "nedster1980/ubuntu2004"
     virtualbox.vm.network :private_network, ip: "172.16.3.21"
 
     config.vm.provider :virtualbox do |v|
@@ -17,6 +21,14 @@ Vagrant.configure("2") do |config|
       v.cpus = 1
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--ioapic", "on"]
+    end
+    
+    #Add ssh auth to server could be added within packer
+    config.vm.provision "shell" do |s|
+      ssh_pub_key = File.readlines("#{DIR_HOME}/.ssh/id_rsa.pub").first.strip
+      s.inline = <<-SHELL
+        echo #{ssh_pub_key} >> /home/vagrant/.ssh/authorized_keys
+      SHELL
     end
 
     config.vm.provision "shell", inline: "echo Hello, World"
