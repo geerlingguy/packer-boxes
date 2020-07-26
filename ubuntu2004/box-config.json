@@ -38,8 +38,8 @@
         "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso"
       ],
       "iso_checksum": "sha256:36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "ssh_username": "{{user `ssh_username`}}",
+      "ssh_password": "{{user `ssh_password`}}",
       "ssh_private_key_file": "{{user `ssh_private_key`}}",
       "ssh_port": 22,
       "ssh_wait_timeout": "1800s",
@@ -89,7 +89,8 @@
     },
     {
       "type": "ansible-local",
-      "playbook_file": "ansible/main.yml"
+      "playbook_file": "ansible/main.yml",
+      "playbook_dir": "ansible/"
     },
     {
       "type": "shell",
@@ -117,15 +118,15 @@
     "no_proxy": "{{ env `no_proxy` }}",
     "rsync_proxy": "{{ env `rsync_proxy` }}",
     "ssh_fullname": "Neil Richards",
-    "ssh_password": "ubuntu",
-    "ssh_username": "ubuntu",
-    "ssh_private_key": "C:/Users/neil.richards/.vagrant.d/insecure_private_key",
+    "ssh_password": "vagrant",
+    "ssh_username": "vagrant",
+    "ssh_private_key": "{{env `USERPROFILE`}}/.vagrant.d/insecure_private_key",
     "update": "false",
     "vagrant_cloud_token": "{{env `VAGRANT_CLOUD_TOKEN`}}",
     "vbox_guest_additions_iso": "VBoxGuestAdditions_6.1.10.iso",
     "vbox_guest_additions_local_path": "/home/nrichards/virtualbox/",
     "vbox_guest_additions_path": "http://download.virtualbox.org/virtualbox/6.1.10/",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "vm_name": "ubuntu2004-server"
   }
 }

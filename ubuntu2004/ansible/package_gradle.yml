@@ -1,21 +1,20 @@
 ---
-    # Download and install gradle downloads it to a gradle-6.5.1 folder
-    - name: "Download and unarchive gradle and place in /usr/local/gradle-6.5.1"
-      unarchive:
-        src: https://downloads.gradle-dn.com/distributions/gradle-6.5.1-bin.zip
-        dest: /usr/local/
-        remote_src: yes
+# Download and install gradle downloads it to a gradle-6.5.1 folder
+- name: "Download and unarchive gradle and place in /usr/local/gradle-6.5.1"
+  unarchive:
+    src: https://downloads.gradle-dn.com/distributions/gradle-6.5.1-bin.zip
+    dest: /usr/local/
+    remote_src: yes
     
-    - name: "Create gradle.sh file in /etc/profile.d"
-      file:
-        path: /etc/profile.d/gradle.sh
-        state: touch
-        mode: '0755'
-    
-    
-    - name: "Add a line to gradle.sh to add /usr/local/gradle/bin to path"
-      lineinfile:
-        path: /etc/profile.d/gradle.sh
-        line: export PATH=/usr/local/gradle-6.5.1/bin:$PATH
-        create: yes
+- name: "Create gradle.sh file in /etc/profile.d"
+  file:
+    path: /etc/profile.d/gradle.sh
+    state: touch
+    mode: '0755'
+  
+- name: "Add a line to gradle.sh to add /usr/local/gradle/bin to path"
+  lineinfile:
+    path: /etc/profile.d/gradle.sh
+    line: export PATH=/usr/local/gradle-6.5.1/bin:$PATH
+    create: yes
     

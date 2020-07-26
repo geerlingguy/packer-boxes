@@ -1,18 +1,18 @@
 ---
-  # Download and install node 12 and npm
-  - name: "Download with node source setup file"
-    get_url:
-      url: https://deb.nodesource.com/setup_12.x
-      dest: /home/vagrant/nodesource_setup.sh
-      mode: '755'
+# Download and install node 12 and npm
+- name: "Download with node source setup file"
+  get_url:
+    url: https://deb.nodesource.com/setup_12.x
+    dest: /home/vagrant/nodesource_setup.sh
+    mode: '755'
   
-  - name: "Execute nodesource_setup.sh"
-    shell: ./nodesource_setup.sh
-    args:
-      chdir: /home/vagrant/
+- name: "Execute nodesource_setup.sh"
+  shell: ./nodesource_setup.sh
+  args:
+    chdir: /home/vagrant/
   
-  - name: "Install node and npm"
-    apt:
-      name: nodejs
-      update_cache: yes
-      state: present  
+- name: "Install node and npm"
+  apt:
+    name: nodejs
+    update_cache: yes
+    state: present  
