@@ -12,7 +12,6 @@ This project contains the Packer build configurations for all of Jeff Geerling's
   - [geerlingguy/centos6](https://app.vagrantup.com/geerlingguy/boxes/centos6) - [`centos6` directory](centos6/)
   - [geerlingguy/debian10](https://app.vagrantup.com/geerlingguy/boxes/debian10) - [`debian10` directory](debian10/)
   - [geerlingguy/debian9](https://app.vagrantup.com/geerlingguy/boxes/debian9) - [`debian9` directory](debian9/)
-  - [geerlingguy/debian8](https://app.vagrantup.com/geerlingguy/boxes/debian8) - [`debian8` directory](debian8/)
 
 All of these boxes are available as public, free Vagrant boxes and can be used with the command:
 
