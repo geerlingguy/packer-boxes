@@ -59,10 +59,10 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/ubuntu-16.04.6-server-amd64.iso",
-        "http://releases.ubuntu.com/16.04/ubuntu-16.04.6-server-amd64.iso"
+        "ubuntu-16.04.7-server-amd64.iso",
+        "http://releases.ubuntu.com/16.04/ubuntu-16.04.7-server-amd64.iso"
       ],
-      "iso_checksum": "sha256:16afb1375372c57471ea5e29803a89a5a6bd1f6aabea2e5e34ac1ab7eb9786ac",
+      "iso_checksum": "sha256:b23488689e16cad7a269eb2d3a3bf725d3457ee6b0868e00c8762d3816e25848",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,

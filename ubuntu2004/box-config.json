@@ -55,13 +55,13 @@
       "boot_wait": "10s",
       "disk_size": 81920,
       "guest_os_type": "Ubuntu_64",
-      "headless": false,
+      "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "iso/focal-legacy-server-amd64.iso",
-        "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04-legacy-server-amd64.iso"
+        "ubuntu-20.04.1-legacy-server-amd64.iso",
+        "http://cdimage.ubuntu.com/ubuntu-legacy-server/releases/20.04/release/ubuntu-20.04.1-legacy-server-amd64.iso"
       ],
-      "iso_checksum": "sha256:36f15879bd9dfd061cd588620a164a82972663fdd148cce1f70d57d314c21b73",
+      "iso_checksum": "sha256:f11bda2f2caed8f420802b59f382c25160b114ccc665dbac9c5046e7fceaced2",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
