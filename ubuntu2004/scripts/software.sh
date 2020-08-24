@@ -32,6 +32,6 @@ apt-get -y update
 
 #Install Docker, Ansible, K8s, dotnet core 3.1 and Open JDK 8
 apt-get -y install docker-ce
-apt-get -y install kubelet kubeadm kubectl kubernetes-cni
+apt-get -y -qy install kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 kubernetes-cni=1.16.13-00
 apt-get -y install dotnet-sdk-3.1
 apt-get -y install openjdk-11-jre-headless
