@@ -5,7 +5,7 @@ pip uninstall ansible
 apt-get remove python-pip python-dev
 
 # Apt cleanup.
-apt autoremove
+apt autoremove -y
 apt update
 
 # Delete unneeded files.
