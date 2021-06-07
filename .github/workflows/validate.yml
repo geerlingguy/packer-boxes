@@ -14,7 +14,7 @@ jobs:
       - name: Install Packer
         run: |
           # Download and install Packer.
-          export VER="1.5.1"
+          export VER="1.7.2"
           wget https://releases.hashicorp.com/packer/${VER}/packer_${VER}_linux_amd64.zip
           unzip packer_${VER}_linux_amd64.zip
           sudo mv packer /usr/local/bin
