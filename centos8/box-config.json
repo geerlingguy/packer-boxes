@@ -31,10 +31,10 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "CentOS-8.2.2004-x86_64-dvd1.iso",
-        "http://mirror.mobap.edu/centos/8.2.2004/isos/x86_64/CentOS-8.2.2004-x86_64-dvd1.iso"
+        "CentOS-8.4.2105-x86_64-dvd1.iso",
+        "http://mirror.mobap.edu/centos/8.4.2105/isos/x86_64/CentOS-8.4.2105-x86_64-dvd1.iso"
       ],
-      "iso_checksum": "sha256:c87a2d81d67bbaeaf646aea5bedd70990078ec252fc52f5a7d65ff609871e255",
+      "iso_checksum": "sha256:0394ecfa994db75efc1413207d2e5ac67af4f6685b3b896e2837c682221fd6b2",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
