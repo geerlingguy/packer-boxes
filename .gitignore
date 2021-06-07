@@ -3,4 +3,3 @@
 *.box
 iso/*
 .vagrant/*
-centos6/roles/*

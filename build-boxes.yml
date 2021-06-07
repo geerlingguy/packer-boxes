@@ -7,11 +7,9 @@
     boxes:
       - centos8
       - centos7
-      - centos6
       - debian10
       - debian9
       - ubuntu1804
-      - ubuntu1604
       - ubuntu2004
     versions: {}
 
