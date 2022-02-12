@@ -9,6 +9,7 @@ This project contains the Packer build configurations for all of Jeff Geerling's
   - [geerlingguy/rockylinux8](https://app.vagrantup.com/geerlingguy/boxes/rockylinux8) - [`rockylinux8` directory](rockylinux8/)
   - [geerlingguy/centos8](https://app.vagrantup.com/geerlingguy/boxes/centos8) - [`centos8` directory](centos8/)
   - [geerlingguy/centos7](https://app.vagrantup.com/geerlingguy/boxes/centos7) - [`centos7` directory](centos7/)
+  - [geerlingguy/debian11](https://app.vagrantup.com/geerlingguy/boxes/debian11) - [`debian11` directory](debian11/)
   - [geerlingguy/debian10](https://app.vagrantup.com/geerlingguy/boxes/debian10) - [`debian10` directory](debian10/)
   - [geerlingguy/debian9](https://app.vagrantup.com/geerlingguy/boxes/debian9) - [`debian9` directory](debian9/)
 

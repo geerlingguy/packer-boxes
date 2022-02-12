@@ -48,7 +48,7 @@
       "boot_wait": "5s",
       "disk_size": 81920,
       "guest_os_type": "Debian_64",
-      "headless": true,
+      "headless": false,
       "http_directory": "http",
       "iso_urls": [
         "debian-11.2.0-amd64-netinst.iso",
