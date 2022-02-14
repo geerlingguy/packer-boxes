@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 
   # VirtualBox.
   config.vm.define "virtualbox" do |virtualbox|
-    virtualbox.vm.hostname = "virtualbox-centos8"
+    virtualbox.vm.hostname = "virtualbox-rockylinux8"
     virtualbox.vm.box = "file://builds/virtualbox-rockylinux8.box"
     virtualbox.vm.network :private_network, ip: "172.16.5.2"
 

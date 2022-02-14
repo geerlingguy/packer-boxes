@@ -51,10 +51,10 @@
       "headless": true,
       "http_directory": "http",
       "iso_urls": [
-        "debian-10.9.0-amd64-xfce-CD-1.iso",
-        "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-10.9.0-amd64-xfce-CD-1.iso"
+        "debian-10.11.0-amd64-xfce-CD-1.iso",
+        "https://cdimage.debian.org/cdimage/archive/10.11.0/amd64/iso-cd/debian-10.11.0-amd64-xfce-CD-1.iso"
       ],
-      "iso_checksum": "sha256:6e507be9fd35c8a7c6be00aefa5b550ed3d8641432b2ae533295f4bb5246642b",
+      "iso_checksum": "sha256:3e8a66c0fc0fdcec8692a59c0f53fe1a888b18e07e28de53d794f757c43aa360",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,

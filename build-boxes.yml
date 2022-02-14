@@ -5,10 +5,9 @@
 
   vars:
     boxes:
-      # - centos8
-      - rockylinux8
+      # - rockylinux8
       - centos7
-      - debian11
+      # - debian11
       - debian10
       - debian9
       - ubuntu1804
