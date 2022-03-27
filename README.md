@@ -1,7 +1,7 @@
 
 # Midas' Cattle Factory
 
-This project contains the Packer build configurations for all golden cave VM images used at Currenthost.
+This project contains the Packer build configurations for all golden calf VM images used at Currenthost.
 
 Each box builds a minimal base box for use with VirtualBox.
 
@@ -53,4 +53,4 @@ MIT
 ## Credit
 
 Most of the credit for this repo must go to [Jeff Geerling](https://www.jeffgeerling.com), author of [Ansible for DevOps](https://www.ansiblefordevops.com).
-We extend a golden hand of gratitude for all your work.
+We extend the golden hand of gratitude for all your work.
