@@ -84,11 +84,6 @@
       {
         "output": "builds/{{.Provider}}-debian11.box",
         "type": "vagrant"
-      },
-      {
-        "type": "vagrant-cloud",
-        "box_tag": "geerlingguy/debian11",
-        "version": "{{user `version`}}"
       }
     ]
   ]
