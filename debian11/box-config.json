@@ -1,6 +1,6 @@
 {
   "variables": {
-    "version": "0.3.0"
+    "version": "0.1.0"
   },
   "provisioners": [
     {
@@ -57,7 +57,7 @@
       "iso_checksum": "sha256:7892981e1da216e79fb3a1536ce5ebab157afdd20048fe458f2ae34fbc26c19b",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_port": 2280,
+      "ssh_port": 22,
       "ssh_wait_timeout": "1800s",
       "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
