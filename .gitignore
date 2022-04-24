@@ -3,3 +3,4 @@
 *.box
 iso/*
 .vagrant/*
+ubuntu2204/.vagrant/
