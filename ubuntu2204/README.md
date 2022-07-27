@@ -1,4 +1,4 @@
-# Packer Build - Ubuntu 20.04 minimal Vagrant Box
+# Packer Build - Ubuntu 22.04 minimal Vagrant Box
 
 **Current Ubuntu Version Used**: 22.04 Live server install image
 
