@@ -3,12 +3,12 @@
 
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
-  config.vm.synced_folder '.', '/vagrant', type: 'nfs'
+  config.vm.synced_folder '.', '/vagrant', type: 'nfs', nfs_udp: false
 
   # VirtualBox.
   config.vm.define "virtualbox" do |virtualbox|
     virtualbox.vm.hostname = "virtualbox-ubuntu2204"
-    virtualbox.vm.box = "file://builds/virtualbox-ubuntu2204.box"
+    virtualbox.vm.box = "file://builds/virtualbox-ubuntu2205.box"
     virtualbox.vm.network :private_network, ip: "172.16.3.21"
 
     config.vm.provider :virtualbox do |v|
