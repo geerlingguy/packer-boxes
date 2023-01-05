@@ -4,6 +4,7 @@
 
 This project contains the Packer build configurations for all of Jeff Geerling's (geerlingguy's) Vagrant Boxes. Each box builds a minimal base box for use with VirtualBox. Available boxes include:
 
+  - [geerlingguy/ubuntu2204](https://app.vagrantup.com/geerlingguy/boxes/ubuntu2204) - [`ubuntu2204` directory](ubuntu2204/)
   - [geerlingguy/ubuntu2004](https://app.vagrantup.com/geerlingguy/boxes/ubuntu2004) - [`ubuntu2004` directory](ubuntu2004/)
   - [geerlingguy/ubuntu1804](https://app.vagrantup.com/geerlingguy/boxes/ubuntu1804) - [`ubuntu1804` directory](ubuntu1804/)
   - [geerlingguy/rockylinux8](https://app.vagrantup.com/geerlingguy/boxes/rockylinux8) - [`rockylinux8` directory](rockylinux8/)
