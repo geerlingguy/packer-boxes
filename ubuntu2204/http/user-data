@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+  version: 1
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+    variant: us
+
+  early-commands:
+    - systemctl stop ssh
+
+  ssh:
+    install-server: true
+    allow-pw: true
+
+  identity:
+    hostname: ubuntu2004
+    password: "$6$8P/WYeedh2vMmmn4$5LZtQr7MvzvtE2AGkQIlXJjZKyOUOyHwOcu5WSYBO7ls3.rgnGfl.236U0uAGbFY2ZCJt55tFBeJ1P1j.WQp/1" #vagrant
+    username: vagrant
+
+  storage:
+    layout:
+      name: lvm
+
+  packages:
+    - cryptsetup
+    - build-essential
+    - libssl-dev
+    - libreadline-dev
+    - zlib1g-dev
+    - linux-source
+    - dkms
+    - nfs-common

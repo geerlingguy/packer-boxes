@@ -1,0 +1,84 @@
+{
+  "variables": {
+    "version": ""
+  },
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/ansible.sh"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/setup.sh"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "../shared/main.yml",
+      "galaxy_file": "../shared/requirements.yml"
+    },
+    {
+      "type": "shell",
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+      "script": "scripts/cleanup.sh"
+    }
+  ],
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "boot_command": [
+        "c",
+        "linux /casper/vmlinuz autoinstall ",
+        "ds='nocloud-net;s=http://{{ .HTTPIP }}:{{ .HTTPPort }}/' --- <enter><wait>",
+        "initrd /casper/initrd<enter><wait>",
+        "boot<enter>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 81920,
+      "guest_os_type": "Ubuntu_64",
+      "headless": true,
+      "http_directory": "http",
+      "iso_urls": [
+        "ubuntu-22.04-live-server-amd64.iso",
+        "https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso"
+      ],
+      "iso_checksum": "sha256:84aeaf7823c8c61baa0ae862d0a06b03409394800000b3235854a6b38eb4856f",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "1800s",
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "packer-ubuntu-22.04-amd64",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "1024"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "output": "builds/{{.Provider}}-ubuntu2204.box",
+        "type": "vagrant"
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "geerlingguy/debian11",
+        "version": "{{user `version`}}"
+      }
+    ]
+  ]
+}
