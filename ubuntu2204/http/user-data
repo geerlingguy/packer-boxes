@@ -1,0 +1,10 @@
+#cloud-config
+autoinstall:
+  version: 1
+  identity:
+    hostname: vagrant
+    password: "$6$B566qc2ieo8i/Bnt$fowURQIzy1Z0DogCVHKQ/HKFKbJtSiFm1E0wAGWOBMb1hvhmZ1RQ7GzOpK0.eDY6tn32bkqAPSPu6LHnXVdzr."
+    username: vagrant
+  locale: en_US
+  keyboard:
+    layout: us
